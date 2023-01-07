@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="horario.css">
+    <title>Horario</title>
+</head>
+
+<body>
+    <header>
+
+        <h1><a href="#">Mi Horario</a></h1>
+        <ul class="nav-lists">
+            <li class="nav-item"><a href="#">Exportar a pdf</a></li>
+            <li class="nav-item"><a href="#">Exportar a png</a></li>
+            <li class="nav-item nuevo-horario" onclick="nuevoHorario()">Nuevo Horario</li>
+        </ul>
+
+    </header>
+
+    <div class="container">
+        <main class="table">
+            <div class="item th">
+                <h4>DIA/HR</h4>
+            </div>
+            <div class="item th">
+                <h3>Lunes</h3>
+            </div>
+            <div class="item th">
+                <h3>Martes</h3>
+            </div>
+            <div class="item th">
+                <h3>Miercoles</h3>
+            </div>
+            <div class="item th">
+                <h3>Jueves</h3>
+            </div>
+            <div class="item th">
+                <h3>Viernes</h3>
+            </div>
+            <div class="item hora">
+                <p>08:30-09:30</p>
+            </div>
+            <div class="item ramo" id="item11">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item12">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item13">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item14">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item15">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+
+            <div class="item hora">
+                <p>09:35-10:35</p>
+            </div>
+            <div class="item ramo" id="item21">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item22">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item23">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item24">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item25">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item hora">
+                <p>10:50-11:50</p>
+            </div>
+            <div class="item ramo" id="item31">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item32">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item33">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item34">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item35">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item hora">
+                <p>11:55-12-55</p>
+            </div>
+            <div class="item ramo" id="item41">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item42">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item43">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item44">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item45">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item hora">
+                <p>13:10-14-10</p>
+            </div>
+            <div class="item ramo" id="item51">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item52">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item53">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item54">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item55">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item hora">
+                <p>14:30-15:30</p>
+            </div>
+            <div class="item ramo" id="item61">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item62">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item63">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item64">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item65">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item hora">
+                <p>15:35-16:35</p>
+            </div>
+            <div class="item ramo" id="item71">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item72">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item73">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item74">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item75">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item hora">
+                <p>16:50-17:50</p>
+            </div>
+            <div class="item ramo" id="item81">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item82">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item83">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item84">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item85">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item hora">
+                <p>17:55-18:55</p>
+            </div>
+            <div class="item ramo" id="item91">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item92">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item93">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item94">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item95">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item hora">
+                <p>19:10-20:10</p>
+            </div>
+            <div class="item ramo" id="item101">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item102">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item103">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item104">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+            <div class="item ramo" id="item105">
+                <p>Sistemas Distribuidos</p>
+                <div class="btns">
+                    <img class="edit-btn" src="images/edit.svg" alt="">
+                    <img class="trash-btn" src="images/trash.svg" alt="">
+                </div>
+            </div>
+        </main>
+        <div id="demo-modal" class="modal">
+            <div class="modal__content">
+                <h1>Edita los campos</h1>
+                <input type="hidden" id="idramo">
+                <label for="nombreramo">Asignatura</label>
+                <input type="text" id="nombreramo"><br>
+                <label for="coloramo">Color</label>
+                <input type="color" id="coloramo"><br>
+                <button class="close-btn" id="btn-modal">Guardar</button>
+                <a href="#" class="modal__close">&times;</a>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <a href="https://github.com/F4bian-pacheco">Autor</a>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
