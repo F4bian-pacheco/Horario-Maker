@@ -6,5 +6,6 @@
 ## TODO
 - [ ] Funcion exportar a imagen png.  
 - [ ] Funcion exportar a PDF.
+- [ ] Diseño responsivo.
 
 [Link de la App](https://f4bian-pacheco.github.io/Horario-Maker/)
