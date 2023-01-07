@@ -4,5 +4,5 @@
 * Las horas son estaticas, debido a que ese es el rango horario que manejo.
 
 ## TODO
-[ ] Funcion exportar a imagen png.  
-[ ] Funcion exportar a PDF.
+- [ ] Funcion exportar a imagen png.  
+- [ ] Funcion exportar a PDF.
