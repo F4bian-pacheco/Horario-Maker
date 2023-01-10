@@ -87,9 +87,10 @@ function addRow() {
   const container = document.querySelector('.container');
   const horario = document.getElementById('horario');
   console.log(horario.offsetHeight)
-  const newHeight = horario.offsetHeight + 50;
-  horario.style.height = `${newHeight}px`;
+
   if (rowCounter < 13) {
+    const newHeight = horario.offsetHeight + 50;
+    horario.style.height = `${newHeight}px`;
     rowCounter++;
     horario.innerHTML += `
             <div class="item hora">
