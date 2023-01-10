@@ -36,6 +36,7 @@ header ul {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     gap: 24px;
 }
 
@@ -143,7 +144,7 @@ footer a:hover{
 .ramo {
     position: relative;
     overflow: hidden;
-    font-size:70%;
+    font-size: 80%;
     text-align: center;
     word-wrap: break-word;
 }
