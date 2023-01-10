@@ -1,7 +1,6 @@
 
 const btns = document.querySelectorAll('.btns');
 let idramo;
-nuevoHorario()
 btns.forEach(btn => {
   const editBtn = btn.querySelector('.edit-btn');
   // wrap editBtn in a link tag
