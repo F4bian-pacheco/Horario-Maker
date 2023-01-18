@@ -14,14 +14,15 @@
 
         <h1><a href="#">Mi Horario</a></h1>
         <ul class="nav-lists">
-            <li class="nav-item"><a href="#">Exportar a pdf</a></li>
-            <li class="nav-item"><a href="#">Exportar a png</a></li>
+            <li class="nav-item"><button id="btn-pdf">Exportar a pdf</button></li>
+            <li class="nav-item"><button id="btn-png">Exportar a png</button></li>
             <li class="nav-item nuevo-horario" onclick="nuevoHorario()">Nuevo Horario</li>
         </ul>
 
     </header>
 
-    <div class="container">
+    <button id="edit-rows">Editar filas</button>
+    <div class="container" id="horario-container">
         <main class="table" id="horario">
             <div class="item th">
                 <h4>DIA/HR</h4>
@@ -100,7 +101,7 @@
                     <img class="trash-btn" src="images/trash.svg" alt="">
                 </div>
             </div>
-            <div class="del-row dr" onclick="delRow(this)" data-rowid="1">
+            <div class="del-row show dr" onclick="delRow(this)" data-rowid="1">
                 <img src="images/trash.svg" alt="">
             </div>
 
@@ -156,7 +157,7 @@
                     <img class="trash-btn" src="images/trash.svg" alt="">
                 </div>
             </div>
-            <div class="del-row dr" onclick="delRow(this)" data-rowid="2">
+            <div class="del-row show dr" onclick="delRow(this)" data-rowid="2">
                 <img src="images/trash.svg" alt="">
             </div>
             <div class="item hora">
@@ -211,7 +212,7 @@
                     <img class="trash-btn" src="images/trash.svg" alt="">
                 </div>
             </div>
-            <div class="del-row dr" onclick="delRow(this)" data-rowid="3">
+            <div class="del-row show dr" onclick="delRow(this)" data-rowid="3">
                 <img src="images/trash.svg" alt="">
             </div>
             <div class="item hora">
@@ -266,7 +267,7 @@
                     <img class="trash-btn" src="images/trash.svg" alt="">
                 </div>
             </div>
-            <div class="del-row dr" onclick="delRow(this)" data-rowid="4">
+            <div class="del-row show dr" onclick="delRow(this)" data-rowid="4">
                 <img src="images/trash.svg" alt="">
             </div>
             <div class="item hora">
@@ -321,7 +322,7 @@
                     <img class="trash-btn" src="images/trash.svg" alt="">
                 </div>
             </div>
-            <div class="del-row dr" onclick="delRow(this)" data-rowid="5">
+            <div class="del-row show dr" onclick="delRow(this)" data-rowid="5">
                 <img src="images/trash.svg" alt="">
             </div>
             <div class="item hora">
@@ -376,7 +377,7 @@
                     <img class="trash-btn" src="images/trash.svg" alt="">
                 </div>
             </div>
-            <div class="del-row dr" onclick="delRow(this)" data-rowid="6">
+            <div class="del-row show dr" onclick="delRow(this)" data-rowid="6">
                 <img src="images/trash.svg" alt="">
             </div>
             <div class="item hora">
@@ -431,7 +432,7 @@
                     <img class="trash-btn" src="images/trash.svg" alt="">
                 </div>
             </div>
-            <div class="del-row dr" onclick="delRow(this)" data-rowid="7">
+            <div class="del-row show dr" onclick="delRow(this)" data-rowid="7">
                 <img src="images/trash.svg" alt="">
             </div>
             <div class="item hora">
@@ -486,7 +487,7 @@
                     <img class="trash-btn" src="images/trash.svg" alt="">
                 </div>
             </div>
-            <div class="del-row dr" onclick="delRow(this)" data-rowid="8">
+            <div class="del-row show dr" onclick="delRow(this)" data-rowid="8">
                 <img src="images/trash.svg" alt="">
             </div>
             <div class="item hora">
@@ -541,7 +542,7 @@
                     <img class="trash-btn" src="images/trash.svg" alt="">
                 </div>
             </div>
-            <div class="del-row dr" onclick="delRow(this)" data-rowid="9">
+            <div class="del-row show dr" onclick="delRow(this)" data-rowid="9">
                 <img src="images/trash.svg" alt="">
             </div>
             <div class="item hora">
@@ -596,12 +597,12 @@
                     <img class="trash-btn" src="images/trash.svg" alt="">
                 </div>
             </div>
-            <div class="del-row dr" onclick="delRow(this)" data-rowid="10">
+            <div class="del-row show dr" onclick="delRow(this)" data-rowid="10">
                 <img src="images/trash.svg" alt="">
             </div>
         </main>
         <div class="add-row-container">
-            <div class="add-row" onclick="addRow()">
+            <div class="add-row show" onclick="addRow()">
                 <img src="images/add.svg" alt="">
             </div>
         </div>
@@ -623,6 +624,8 @@
         <h2>Autor: <a href="https://github.com/F4bian-pacheco">https://github.com/F4bian-pacheco</a></h2>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="main.js" history.scrollRestoration = "manual"></script>
 </body>
 

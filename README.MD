@@ -5,8 +5,8 @@
 * Puedes `Ctrl + p` para imprimir la pagina directamente o guardarla como PDF. Tambien puedes sacar una captura de pantalla.
 
 ## TODO
-- [ ] Funcion exportar a imagen png.  
-- [ ] Funcion exportar a PDF.
+- [x] Funcion exportar a imagen png.  
+- [x] Funcion exportar a PDF.
 - [ ] Diseño responsivo.
 
 [Link de la App](https://f4bian-pacheco.github.io/Horario-Maker/)
