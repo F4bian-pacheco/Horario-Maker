@@ -191,7 +191,44 @@ function delRow(row) {
   rowCounter--;
 }
 
+function showEditBtns() {
+  const addRow = document.querySelector(".add-row");
+  const delRow = document.querySelectorAll(".del-row");
+  addRow.classList.toggle("show")
+  delRow.forEach((del) => {
+    del.classList.toggle("show")
+  })
+}
+const btnEdit = document.getElementById("edit-rows");
+btnEdit.addEventListener("click", showEditBtns)
 
 
+function printToPdf() {
+  window.jsPDF = window.jspdf.jsPDF;
+  var docPDF = new jsPDF({
+    orientation: "l",
+    format: "letter"
+  });
+  const horarioToPdf = document.getElementById("horario-container");
+  docPDF.html(horarioToPdf, {
+    callback: function (docPDF) {
+      docPDF.save("Horario");
+    },
+    x: 15,
+    y: 5,
+    width: 250,
+    windowWidth: 1000
+  });
+}
+
+function printToPng() {
+  console.log(this)
+}
+
+const btnPdf = document.getElementById("btn-pdf");
+const btnPng = document.getElementById("btn-png");
+
+btnPdf.addEventListener("click", printToPdf);
+btnPng.addEventListener("click", printToPng);
 
 
