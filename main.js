@@ -2,6 +2,19 @@
 let idramo;
 let rowCounter = 10;
 
+let colorDefault = "#ffffff";
+
+function RGBAToHexA(rgba, forceRemoveAlpha = false) {
+  return "#" + rgba.replace(/^rgba?\(|\s+|\)$/g, '') // Get's rgba / rgb string values
+    .split(',') // splits them at ","
+    .filter((string, index) => !forceRemoveAlpha || index !== 3)
+    .map(string => parseFloat(string)) // Converts them to numbers
+    .map((number, index) => index === 3 ? Math.round(number * 255) : number) // Converts alpha to 255 number
+    .map(number => number.toString(16)) // Converts numbers to hex
+    .map(string => string.length === 1 ? "0" + string : string) // Adds 0 when length of one number is 1
+    .join("") // Puts the array to togehter to a string
+}
+
 function mapBtns() {
   const btns = document.querySelectorAll('.btns');
   btns.forEach(btn => {
@@ -18,18 +31,27 @@ function mapBtns() {
 
     editBtn.addEventListener('click', () => {
 
-      //save coords of editBtn in local storage
-      const coords = editBtn.getBoundingClientRect();
-      const coordsObj = {
-        x: coords.x,
-        y: coords.y
-      };
-      localStorage.setItem('coords', JSON.stringify(coordsObj));
-
       // get parent element
       const parent = btn.parentElement;
       // get p tag
       const p = parent.querySelector('p');
+      // get text content
+      const textramo = p.textContent;
+      let color = RGBAToHexA(parent.style.backgroundColor);
+      if (color == "#NaN") {
+        color = colorDefault;
+      }
+      console.log(color);
+
+      ramoinput = document.getElementById("nombreramo");
+      coloramo = document.getElementById("coloramo");
+
+      if (textramo != "" && color != "#ffffff") {
+        ramoinput.value = textramo;
+        coloramo.value = color;
+      }
+      // ramoinput.value = textramo;
+      // coloramo.value = color;
 
       // get parent id
       const ramoId = parent.id;
@@ -53,12 +75,7 @@ mapBtns();
 
 
 function nuevoHorario() {
-  const ramos = document.querySelectorAll('.ramo');
-  ramos.forEach(ramo => {
-    const p = ramo.querySelector('p');
-    p.textContent = "";
-    ramo.style.backgroundColor = "#fff";
-  });
+  location.reload();
 }
 
 const saveBtn = document.querySelector('.save-btn');
@@ -73,20 +90,17 @@ saveBtn.addEventListener('click', () => {
   const ramoElement = document.getElementById(idramo);
   const p = ramoElement.querySelector('p');
 
+  // se guardan los valores en la casilla
   ramoElement.style.backgroundColor = coloramo.value;
   p.textContent = ramoinput.value;
 
   window.location.href = "#";
-  const coords = JSON.parse(localStorage.getItem('coords'));
-  scrollTo(coords.x, coords.y);
 });
 
 
 
 function addRow() {
-  const container = document.querySelector('.container');
   const horario = document.getElementById('horario');
-  console.log(horario.offsetHeight)
 
   if (rowCounter < 13) {
     const newHeight = horario.offsetHeight + 50;
@@ -192,6 +206,11 @@ function delRow(row) {
 }
 
 function showEditBtns() {
+  if (btnEdit.innerHTML === "Editar filas") {
+    btnEdit.innerHTML = "Guardar filas";
+  } else {
+    btnEdit.innerHTML = "Editar filas";
+  }
   const addRow = document.querySelector(".add-row");
   const delRow = document.querySelectorAll(".del-row");
   addRow.classList.toggle("show")
@@ -200,7 +219,9 @@ function showEditBtns() {
   })
 }
 const btnEdit = document.getElementById("edit-rows");
-btnEdit.addEventListener("click", showEditBtns)
+btnEdit.addEventListener("click", showEditBtns);
+// toggle name of edit button
+
 
 
 function printToPdf() {
@@ -221,14 +242,47 @@ function printToPdf() {
   });
 }
 
-function printToPng() {
-  console.log(this)
-}
+// function printToPng() {
+//   const horarioToPng = document.getElementById("horario-container");
+
+// }
 
 const btnPdf = document.getElementById("btn-pdf");
-const btnPng = document.getElementById("btn-png");
+// const btnPng = document.getElementById("btn-png");
 
 btnPdf.addEventListener("click", printToPdf);
-btnPng.addEventListener("click", printToPng);
+// btnPng.addEventListener("click", printToPng);
+
+
+setUpDownloadPageAsImage();
+
+function setUpDownloadPageAsImage() {
+  const horarioToPng = document.getElementById("horario-container");
+  const height = horarioToPng.offsetHeight;
+  document.getElementById("btn-png").addEventListener("click", function () {
+    html2canvas(horarioToPng, {
+      onrendered: function (canvas) {
+      },
+      width: 1100,
+      height: 700,
+      x: 100,
+      y: -50
+    }).then(function (canvas) {
+      simulateDownloadImageClick(canvas.toDataURL(), "Horario.png");
+    });
+  });
+}
+
+function simulateDownloadImageClick(uri, filename) {
+  var link = document.createElement('a');
+  if (typeof link.download !== 'string') {
+    window.open(uri);
+  } else {
+    link.href = uri;
+    link.download = filename;
+    link.click();
+    link.remove();
+  }
+}
 
 
